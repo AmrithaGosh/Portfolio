@@ -1,26 +1,83 @@
+/* Base styles */
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   margin: 0;
   padding: 0;
+  background: #f9fafb;
+  color: #333;
   text-align: center;
-  background: #f4f4f4;
 }
 
+/* Header styles */
 header {
-  background: #333;
+  background: linear-gradient(135deg, #6b73ff 0%, #000dff 100%);
   color: white;
-  padding: 2rem 0;
+  padding: 3rem 1rem;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
 }
 
+header h1 {
+  margin: 0;
+  font-size: 3rem;
+  letter-spacing: 1px;
+}
+
+header p {
+  margin-top: 0.5rem;
+  font-size: 1.2rem;
+  font-weight: 300;
+}
+
+/* Projects section */
 .projects {
-  padding: 2rem;
+  max-width: 700px;
+  margin: 3rem auto;
+  padding: 0 1rem;
 }
 
+.projects h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: #444;
+}
+
+.projects ul {
+  list-style: none;
+  padding: 0;
+}
+
+.projects li {
+  background: white;
+  margin-bottom: 1rem;
+  padding: 1rem 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  cursor: default;
+}
+
+.projects li:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+}
+
+/* Footer */
 footer {
   background: #222;
-  color: #ccc;
+  color: #bbb;
   padding: 1rem 0;
   position: fixed;
   width: 100%;
   bottom: 0;
+  font-size: 0.9rem;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  header h1 {
+    font-size: 2rem;
+  }
+  .projects {
+    margin: 2rem 1rem;
+  }
 }
